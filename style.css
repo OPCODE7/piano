@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.piano{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: auto;
+    gap: 3px;
+    background-color: black;
+    height: 30%;
+    color: black;
+    padding: 2px 2px 10px 2px;
+}
+
+.piano__white__key,.piano__black__key{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+
+.piano__white__key{
+    position: relative;
+    background-color: white;
+}
+
+.piano__black__key{
+    position: absolute;
+    top: 0;
+    right: -25%;
+    background-color: black;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+    cursor: pointer;
+    color: white;
+    font-size: .8rem;
+}
+
+.click__key{
+    background-color: cadetblue;
+}
+
+@media(min-width: 765px){
+    .piano{
+        width: 60%;
+        height: 40%;
+    }
+}
+
